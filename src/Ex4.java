@@ -50,7 +50,7 @@ public class Ex4 extends Application{
 		flowPane.setHgap(20);//¼¼·Î
 		
 		Scene scene=new Scene(flowPane,1000,500);
-		primaryStage.setTitle("");
+		primaryStage.setTitle("flow");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
@@ -78,7 +78,7 @@ public class Ex4 extends Application{
 		gridPane.add(flowPane2,0,2,2,1);
 		
 		scene=new Scene(gridPane,1000,500);
-		primaryStage.setTitle("");
+		primaryStage.setTitle("grid");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
