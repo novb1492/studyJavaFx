@@ -4,6 +4,7 @@ import java.util.List;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -65,10 +66,18 @@ public class Ex4 extends Application{
 		GridPane.setConstraints(bu,1, 1);
 		GridPane.setConstraints(bu2, 1, 2);
 		
+		
 		gridPane.getChildren().addAll(bu,bu2,label,label2);
 		gridPane.setPadding(new Insets(20, 0, 0, 20));//»ó ¿ì ÇÏÁÂ top,right,botton,left
 		gridPane.setVgap(20);
 		gridPane.setHgap(40);
+		
+		FlowPane flowPane2=new FlowPane();
+		flowPane2.getChildren().add(new Button("col1(0),row(2)"));
+		flowPane2.setStyle("-fx-background-color:black");
+		flowPane2.setAlignment(Pos.CENTER);
+		gridPane.add(flowPane2,0,3,2,1);
+		
 		scene=new Scene(gridPane,1000,500);
 		primaryStage.setTitle("");
 		primaryStage.setScene(scene);
