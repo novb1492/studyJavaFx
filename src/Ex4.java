@@ -60,12 +60,11 @@ public class Ex4 extends Application{
 		Label label=new Label("label");
 		Label label2=new Label("label2");
 		
-		GridPane.setConstraints(label, 0, 1);
-		GridPane.setConstraints(label2, 0, 2);
+		GridPane.setConstraints(label, 0, 0);
+		GridPane.setConstraints(label2, 0, 1);
 		
-		GridPane.setConstraints(bu,1, 1);
-		GridPane.setConstraints(bu2, 1, 2);
-		
+		GridPane.setConstraints(bu,1, 0);
+		GridPane.setConstraints(bu2, 1, 1);
 		
 		gridPane.getChildren().addAll(bu,bu2,label,label2);
 		gridPane.setPadding(new Insets(20, 0, 0, 20));//상 우 하좌 top,right,botton,left
@@ -76,11 +75,28 @@ public class Ex4 extends Application{
 		flowPane2.getChildren().add(new Button("col1(0),row(2)"));
 		flowPane2.setStyle("-fx-background-color:black");
 		flowPane2.setAlignment(Pos.CENTER);
-		gridPane.add(flowPane2,0,3,2,1);
+		gridPane.add(flowPane2,0,2,2,1);
 		
 		scene=new Scene(gridPane,1000,500);
 		primaryStage.setTitle("");
 		primaryStage.setScene(scene);
+		primaryStage.show();
+		
+		//보더
+		Button[] button=new Button[5];
+		String[] text= {"top","left","center","right","bottom"};
+		
+		for(int i=0;i<button.length;i++) {
+			button[i]=new Button(text[i]);
+		}
+		borderPane.setTop(button[0]);
+		borderPane.setLeft(button[1]);
+		borderPane.setCenter(button[2]);
+		borderPane.setRight(button[3]);
+		borderPane.setBottom(button[4]);
+		
+		primaryStage.setTitle("border");
+		primaryStage.setScene(new Scene(borderPane,1000,500));
 		primaryStage.show();
 	}
 }
