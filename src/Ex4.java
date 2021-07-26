@@ -50,10 +50,10 @@ public class Ex4 extends Application{
 		flowPane.setHgap(20);//세로
 		
 		Scene scene=new Scene(flowPane,1000,500);
-		primaryStage.setTitle("flow");
+		/*primaryStage.setTitle("flow");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		
+		*/
 		//그리드
 		Button bu=new Button("버튼1");
 		Button bu2=new Button("버튼2");
@@ -76,6 +76,14 @@ public class Ex4 extends Application{
 		flowPane2.setStyle("-fx-background-color:black");
 		flowPane2.setAlignment(Pos.CENTER);
 		gridPane.add(flowPane2,0,2,2,1);
+		FlowPane flowPane3=new FlowPane();
+		flowPane3.getChildren().add(new Button("col1(3),row(0)"));
+		flowPane3.setStyle("-fx-background-color:pink");
+		flowPane3.setPrefSize(100, 100);
+	
+		gridPane.add(flowPane3,3,0,2,1);
+		
+		
 		
 		scene=new Scene(gridPane,1000,500);
 		primaryStage.setTitle("grid");
@@ -95,8 +103,9 @@ public class Ex4 extends Application{
 		borderPane.setRight(button[3]);
 		borderPane.setBottom(button[4]);
 		
-		primaryStage.setTitle("border");
+
+		/*primaryStage.setTitle("border");
 		primaryStage.setScene(new Scene(borderPane,1000,500));
-		primaryStage.show();
+		primaryStage.show();*/
 	}
 }
