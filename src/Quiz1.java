@@ -39,7 +39,7 @@ public class Quiz1 extends Application{
 		/* Center */
 		FlowPane flowCenter = new FlowPane(new Button("내용 들어가는 곳"));
 		flowCenter.setStyle("-fx-background-color : #CEF279");
-//		flowCenter.setPrefWidth(90);
+		flowCenter.setPrefWidth(90);
 		border.setCenter(flowCenter);
 		
 		/* Right */
