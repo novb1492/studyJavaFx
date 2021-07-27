@@ -3,6 +3,7 @@ package new2;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -21,6 +22,11 @@ public class toglebutton extends Application {
 		
 		toggleButton.setGraphic(new ImageView("img/magi.png"));
 		toggleButton2.setGraphic(new ImageView("img/Rogue.png"));
+		toggleButton2.setSelected(true);
+		
+		ToggleGroup toggleGroup=new ToggleGroup();
+		toggleButton.setToggleGroup(toggleGroup);
+		toggleButton2.setToggleGroup(toggleGroup);
 		
 		HBox hBox=new HBox();
 		hBox.getChildren().addAll(toggleButton,toggleButton2);
