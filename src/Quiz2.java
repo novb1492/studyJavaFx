@@ -43,11 +43,11 @@ public class Quiz2 extends Application{
 			ListView<String>listLeft=new ListView<String>();
 			listLeft.getItems().addAll("itme1","item2","item3");
 			listLeft.setMaxSize(90, 100);
-			//AnchorPane anchorPane=new AnchorPane();
-			//anchorPane.getChildren().add(listLeft);
+			/*AnchorPane anchorPane=new AnchorPane();
+			  anchorPane.getChildren().add(listLeft);
 			
-			//FlowPane flowPaneleft=new FlowPane();
-			//flowPaneleft.getChildren().add(anchorPane);
+			  FlowPane flowPaneleft=new FlowPane();
+		      flowPaneleft.getChildren().add(anchorPane);*/
 			borderPane.setLeft(listLeft);
 			
 			FlowPane flowPaneCenter=new FlowPane(new Button("내용들어가는곳"));
