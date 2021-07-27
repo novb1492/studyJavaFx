@@ -3,6 +3,7 @@ package new2;
 
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -21,13 +22,15 @@ public class label extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		Label label=new Label("label");
 		
-		label.setPrefSize(200, 30);
+		label.setPrefSize(300, 30);
 		label.setAlignment(Pos.CENTER);
-		label.setGraphic(new ImageView("/img/quiz.jpg"));
-
+		label.setPadding(new Insets(0, 0,0	, 100));
+		//label.setGraphic(new ImageView("/img/quiz.jpg"));
+		label.setWrapText(true);
+		
 		HBox hBox=new HBox();
 		hBox.getChildren().add(label);
-		hBox.setPrefSize(300, 200);
+		hBox.setPrefSize(100, 200);
 		hBox.setSpacing(10);
 		
 		primaryStage.setTitle("checkbox");
