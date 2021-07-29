@@ -1,4 +1,4 @@
-package new2;
+package quiz5;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +9,6 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -32,32 +31,16 @@ public class quiz5 extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		ToggleGroup toggleGroup=new ToggleGroup();
-		
+		getSystem getSystem=new getSystem();
 		ImageView imageView=new ImageView("/img/L2Char.png");
-		String[] url2= {warriorURL,magiwarriorURL,roguewarriorURL};
-		
-		List<String>url=new ArrayList<String>();
-		for(String s:url2) {
-			url.add(s);
-		}
 		
 		String[] jobs= {warrior,magi,rogue};
-		
-		HashMap<String,ImageView>imageViews=new HashMap<String, ImageView>();
-		for(int i=0;i<url.size();i++) {
-			ImageView imageView2=new ImageView(url.get(i));
-			imageView2.setFitWidth(30);
-			imageView2.setFitHeight(35);
-			imageViews.put(jobs[i],imageView2);
-		}
-		List<ToggleButton>buttons=new ArrayList<ToggleButton>();
-		for(String s:imageViews.keySet()) {
-			ToggleButton button=new ToggleButton();
-			button.setGraphic(imageViews.get(s));
-			button.setToggleGroup(toggleGroup);
-			buttons.add(button);
-		}
+		String[] url2= {warriorURL,magiwarriorURL,roguewarriorURL};
+
+		List<String>url=getSystem.geturls(url2);
+		HashMap<String,ImageView>imageViews=getSystem.getImages(url, jobs);
+
+		List<ToggleButton>buttons=getSystem.getToggleButtons(imageViews);
 
 		HBox hBox=new HBox();
 		hBox.getChildren().addAll(buttons);
