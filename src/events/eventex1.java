@@ -22,12 +22,18 @@ public class eventex1 extends Application {
 		label.setLayoutX(50);
 		label.setLayoutY(50);
 		
+		//정석
 		label.setOnMouseEntered(new EventHandler<Event>() {
 			@Override
 			public void handle(Event event) {
 				label.setScaleX(1.5);
 				label.setScaleY(1.5);
 			}
+		});
+		//람다식
+		label.setOnMouseExited((data)-> {
+				label.setScaleX(1);
+				label.setScaleY(1);
 		});
 		AnchorPane anchorPane=new AnchorPane();
 		anchorPane.getChildren().add(label);
