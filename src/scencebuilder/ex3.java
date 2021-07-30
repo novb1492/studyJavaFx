@@ -23,5 +23,4 @@ public class ex3 extends Application{
 		primaryStage.show();
 		
 	}
-
 }

@@ -13,8 +13,8 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="130.0" spacing="10.0">
                <children>
-                  <TextField />
-                  <TextField />
+                  <TextField fx:id="id" />
+                  <TextField fx:id="pwd" />
                </children>
             </VBox>
             <Button fx:id="button" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Button" />
