@@ -1,4 +1,4 @@
-package ex8;
+package practice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,25 +9,23 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
-
-
-public class RegisterService {
-
-	public void RegisterProc(Parent registerForm) {
-		TextField idText = (TextField)registerForm.lookup("#idText");
-		TextField pwText = (TextField)registerForm.lookup("#pwText");
-		TextField nameText = (TextField)registerForm.lookup("#nameText");
-		TextField confirmText = (TextField)registerForm.lookup("#confirmText");
-		ComboBox<String>comboBox=(ComboBox<String>) registerForm.lookup("#ageCombo");
+public class regsisService {
+	
+	public void RegisterProc(Parent Parent) {
+		TextField idText = (TextField)Parent.lookup("#idText");
+		TextField pwText = (TextField)Parent.lookup("#pwText");
+		TextField nameText = (TextField)Parent.lookup("#nameText");
+		TextField confirmText = (TextField)Parent.lookup("#confirmText");
+		ComboBox<String>comboBox=(ComboBox<String>) Parent.lookup("#ageCombo");
 		List<CheckBox>checkBoxs=new ArrayList<CheckBox>();
 		List<RadioButton>RadioButtons=new ArrayList<RadioButton>();
 		
-		checkBoxs.add((CheckBox)registerForm.lookup("#musicCheck"));
-		checkBoxs.add((CheckBox)registerForm.lookup("#movieCheck"));
-		checkBoxs.add((CheckBox)registerForm.lookup("#sportCheck"));
+		checkBoxs.add((CheckBox)Parent.lookup("#musicCheck"));
+		checkBoxs.add((CheckBox)Parent.lookup("#movieCheck"));
+		checkBoxs.add((CheckBox)Parent.lookup("#sportCheck"));
 		
-		RadioButtons.add((RadioButton)registerForm.lookup("#manRadio"));
-		RadioButtons.add((RadioButton)registerForm.lookup("#womenRadio"));
+		RadioButtons.add((RadioButton)Parent.lookup("#manRadio"));
+		RadioButtons.add((RadioButton)Parent.lookup("#womenRadio"));
 		
 		System.out.println("idText : " + idText.getText());
 		System.out.println("pwText : " + pwText.getText());
@@ -44,8 +42,6 @@ public class RegisterService {
 				System.out.println("RadioButton : " + c.getText());
 			}
 		}
-	
-	
 	}
 
 }
