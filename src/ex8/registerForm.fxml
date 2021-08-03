@@ -102,7 +102,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="canButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="취소">
+            <Button fx:id="canButton" onAction="#CancelProc" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="취소">
                <font>
                   <Font size="18.0" />
                </font>

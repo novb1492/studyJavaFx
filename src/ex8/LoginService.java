@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -34,11 +35,19 @@ public class LoginService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		addComboBox(registerForm);
+		
+		registerStage.setScene(new Scene(registerForm));
+		registerStage.show();
 		
 		Controller control = loader.getController();
 		control.setRegisterForm(registerForm);
 		
-		registerStage.setScene(new Scene(registerForm));
-		registerStage.show();
 	} 
+	public void addComboBox(Parent registerForm) {
+		ComboBox<String>comboBoxs=(ComboBox<String>) registerForm.lookup("#ageCombo");
+		if(comboBoxs!=null) {
+			comboBoxs.getItems().addAll("10","20","30","40");
+		}
+	}
 }

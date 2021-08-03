@@ -32,7 +32,7 @@
       <HBox alignment="TOP_CENTER" maxWidth="400.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
          <children>
             <Button fx:id="loginButton" mnemonicParsing="false" onAction="#LoginProc" prefHeight="30.0" prefWidth="70.0" text="로그인" />
-            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#CancelProc" prefHeight="30.0" prefWidth="70.0" text="취소" />
+            <Button fx:id="cancelButton"   mnemonicParsing="false" onAction="#CancelProc" prefHeight="30.0" prefWidth="70.0" text="취소" />
             <Button fx:id="registerButton" mnemonicParsing="false" onAction="#RegisterOpenProc" prefHeight="30.0" prefWidth="70.0" text="회원가입" />
          </children>
          <padding>

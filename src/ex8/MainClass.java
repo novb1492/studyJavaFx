@@ -18,14 +18,14 @@ public class MainClass extends Application{
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("loginForm.fxml"));
 		Parent root = loader.load();
 		
+		primaryStage.setTitle("EX7");
+		primaryStage.setScene(new Scene(root));
+		primaryStage.show();
+		
 		/* loginForm.fxml에서 생성한 객체를 getController() 갖고 온다. */
 		Controller control = loader.getController();
 		/* loginForm.fxml의 화면객체를 Controller로 전달 */
 		control.setLoginForm(root);
-		
-		primaryStage.setTitle("EX7");
-		primaryStage.setScene(new Scene(root));
-		primaryStage.show();
 	}
 
 }
