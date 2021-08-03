@@ -22,9 +22,7 @@ public class MainClass extends Application{
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
 		
-		/* loginForm.fxml에서 생성한 객체를 getController() 갖고 온다. */
 		Controller control = loader.getController();
-		/* loginForm.fxml의 화면객체를 Controller로 전달 */
 		control.setLoginForm(root);
 	}
 
