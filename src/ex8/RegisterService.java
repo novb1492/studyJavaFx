@@ -12,6 +12,8 @@ import javafx.scene.control.TextField;
 
 
 public class RegisterService {
+	
+	private registerDao registerDao=new registerDao();
 
 	public void RegisterProc(Parent registerForm) {
 		TextField idText = (TextField)registerForm.lookup("#idText");
@@ -29,21 +31,7 @@ public class RegisterService {
 		RadioButtons.add((RadioButton)registerForm.lookup("#manRadio"));
 		RadioButtons.add((RadioButton)registerForm.lookup("#womenRadio"));
 		
-		System.out.println("idText : " + idText.getText());
-		System.out.println("pwText : " + pwText.getText());
-		System.out.println("nameText : " + nameText.getText());
-		System.out.println("confirmText : " + confirmText.getText());
-		System.out.println("comboBox : " + comboBox.getSelectionModel().getSelectedItem());
-		for(CheckBox c:checkBoxs) {
-			if(c.isSelected()) {
-				System.out.println("CheckBox : " + c.getText());
-			}
-		}
-		for(RadioButton c:RadioButtons) {
-			if(c.isSelected()) {
-				System.out.println("RadioButton : " + c.getText());
-			}
-		}
+		registerDao.insert(idText,pwText,nameText,confirmText,comboBox,checkBoxs,RadioButtons);
 	
 	
 	}

@@ -25,4 +25,17 @@ public class loginService {
 		controller.setRegisterForm(parent);
 		
 	}
+	public void login() {
+		Stage stage=new Stage();
+		FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("test.fxml"));
+		Parent parent=null;
+		try {
+			parent=fxmlLoader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		stage.setScene(new Scene(parent));
+		stage.show();
+	}
 }

@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.stage.Stage;
+
 
 
 public class Controller implements Initializable{
@@ -29,7 +29,7 @@ public class Controller implements Initializable{
 		 
 	}
 	public void LoginProc() {
-		
+		loginService.login();
 	}
 	public void RegisterOpenProc() {
 		loginService.RegisterOpenProc();
