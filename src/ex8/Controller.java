@@ -42,4 +42,7 @@ public class Controller implements Initializable{
 	public void CancelProc(ActionEvent actionEvent) {
 		cancleService.windowClose(actionEvent);
 	}
+	public void index() {
+		System.out.println("index");
+	}
 }
